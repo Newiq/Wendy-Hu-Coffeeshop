@@ -1,0 +1,237 @@
+/* Variables */
+$font-family: 'Open Sans', sans-serif;
+$nitro-blue: #5BACC3;
+$nitro-pink: #FFF0ED;
+$nitro-black: #393939;
+$nitro-grey: #909090;
+$nitro-lightgrey:#f7f7f7;
+$nitro-white:white;
+
+$font-size-base: 15px;
+$font-size-large: 2.2rem;
+$font-size-medium: 1.4rem;
+$font-size-small: 1.2rem;
+
+$font-weight-base:400;
+$font-weight-base-1:450;
+$font-weight-base-2:480;
+$font-weight-bold:700;
+$font-weight-thin:330;
+$font-weight-thinner:300;
+
+$spacing-small: 1.34rem;
+$spacing-medium: 2.67rem;
+$spacing-large: 3.34rem;
+$border-radius: 0.67rem;
+$box-shadow: 0 0.34rem 0.6rem -0.067rem rgba(0, 0, 0, 0.25);
+
+/* mixins */
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-column{
+    flex-direction: column;
+    align-content: center;
+}
+@mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    
+}
+@mixin flex-space_evenly{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+@mixin flex-space-around{
+    display: flex;
+    justify-content: space-around; 
+}
+
+@mixin text-center {
+    text-align: center;
+}
+
+@mixin card-style {
+    background: linear-gradient(to bottom, $nitro-white 66.67%, $nitro-pink 33.33%);
+    text-align: center;
+    padding: $spacing-small;
+    margin: $spacing-small;
+    width: 22rem;
+    height: 29.34rem;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    position: relative;
+    overflow: hidden;
+}
+
+@mixin btn_style{
+    border: $nitro-black solid 0.14rem;
+    background-color: transparent;
+    width: 12rem;
+    color: $nitro-white;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-base;
+    margin: $spacing-small $spacing-small $spacing-small 0;
+    padding: $spacing-small 0;
+    text-align: center;
+    transition: top 0.1s, left 0.1s;
+}
+
+@mixin relative_top{
+    position: relative;
+    
+}
+
+@mixin absolute_bottom{
+    position: absolute;
+    z-index: -1;
+}
+
+@mixin menu_pstyle{
+    display: inline-block;
+    text-align: center;
+    font-style: italic;
+    width: 33.3%;
+    color: $nitro-black;
+    padding: $spacing-small;
+
+}
+
+@mixin discount_txt{
+    display: inline-block;
+    color: $nitro-white;
+    font-size: 3rem;
+    font-weight: $font-weight-base;
+    text-align: center;
+    margin: $spacing-small;
+    padding: $spacing-small;
+}
+
+@mixin none-style{
+    text-decoration: none;
+    color: inherit;  
+    font-weight: inherit;  
+    font-style: inherit; 
+}
+
+@mixin base-style{
+    padding: $spacing-small;
+    margin: $spacing-small;
+}
+
+/* Base styles */
+
+html {
+    font-size: $font-size-base;
+}
+
+body {
+    margin: 0;
+    font-family: $font-family;
+    font-weight: $font-weight-base;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 48rem) {
+    html {
+        font-size: 0.8rem;
+    }
+}
+
+/* Header styles */
+.icon {
+    display: inline-block;
+    width: 3.34rem;
+    margin-left: $spacing-small;
+    margin-right: 0.67rem;
+}
+
+.header {
+    background-color: $nitro-pink;
+    &__logo {
+    font-size: 3rem;
+    font-weight: $font-weight-thin;
+    margin: 0;
+    }
+    &__nav {
+        @include flex-space-between;
+        align-items: center;
+        gap: $spacing-small;
+
+        &-logo{
+            display: flex;
+            text-decoration: none;
+            color: $nitro-black;
+            align-content: center;
+            text-align: center;
+        }
+        &-left,
+        &-right {
+        @include flex-center;
+        }
+
+        &-right {
+        margin: 0;
+        padding: 0;
+        }
+        &-item {
+            margin: 1.6875rem 0 0.625rem 0;
+            padding: 1.25rem;
+        }
+        
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $nitro-black;
+        display: flex;
+        align-content: center;
+        text-align: center;
+        &--highlight {
+            color: $nitro-blue;
+            }
+        }
+
+}
+
+nav li {
+    margin-top: 0;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-base-1;
+    list-style: none;
+}
+
+/* Typography */
+
+
+h1 {
+    font-size: 4rem;
+    font-weight: $font-weight-thinner;
+    text-align: center;
+    }
+
+h2 {
+    font-size: 4rem;
+    font-weight: $font-weight-thinner;
+    color: $nitro-black;
+    margin: 0;
+    padding: $spacing-small;
+}
+
+h3 {
+    font-size: $font-size-large;
+    font-weight: $font-weight-thin;
+    text-align: center;
+    color: $nitro-black;
+}
+
+p {
+    font-size: $font-size-small;
+    font-weight: $font-weight-base-2;
+    margin: 0;
+    color: $nitro-black;
+}

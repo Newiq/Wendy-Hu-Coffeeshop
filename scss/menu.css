@@ -1,0 +1,219 @@
+/* Variables */
+/* mixins */
+/* Base styles */
+html {
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 48rem) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+/* Header styles */
+.icon {
+  display: inline-block;
+  width: 3.34rem;
+  margin-left: 1.34rem;
+  margin-right: 0.67rem;
+}
+
+.header {
+  background-color: #FFF0ED;
+}
+.header__logo {
+  font-size: 3rem;
+  font-weight: 330;
+  margin: 0;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.34rem;
+}
+.header__nav-logo {
+  display: flex;
+  text-decoration: none;
+  color: #393939;
+  align-content: center;
+  text-align: center;
+}
+.header__nav-left, .header__nav-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__nav-right {
+  margin: 0;
+  padding: 0;
+}
+.header__nav-item {
+  margin: 1.6875rem 0 0.625rem 0;
+  padding: 1.25rem;
+}
+.header__link {
+  text-decoration: none;
+  color: #393939;
+  display: flex;
+  align-content: center;
+  text-align: center;
+}
+.header__link--highlight {
+  color: #5BACC3;
+}
+
+nav li {
+  margin-top: 0;
+  font-size: 1.4rem;
+  font-weight: 450;
+  list-style: none;
+}
+
+/* Typography */
+h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #393939;
+  margin: 0;
+  padding: 1.34rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+  font-weight: 330;
+  text-align: center;
+  color: #393939;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 480;
+  margin: 0;
+  color: #393939;
+}
+
+/* Background styles */
+.bg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 46.67rem;
+  background: url("../assets/images/coffee-circle.jpg") center/cover;
+  z-index: -2;
+}
+.bg__title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: white;
+  border: #5BACC3 solid 0.34rem;
+  width: 20rem;
+  height: 13.34rem;
+}
+.bg__title::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: -1rem;
+  bottom: -1rem;
+  background-color: #393939;
+  z-index: -1;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+#hotdrink, #pastries {
+  background-color: #FFF0ED;
+  text-align: center;
+}
+
+#colddrink {
+  background-color: #F7F7F7;
+  text-align: center;
+}
+
+/* Menu section */
+.subnav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.34rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #393939;
+  color: white;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu__item {
+  margin: 1.34rem 0;
+  text-align: center;
+  border-left: #5BACC3 solid 0.27rem;
+  padding: 0 1.34rem;
+}
+.menu__link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+}
+
+.drinks__title, .drinks__subtitle {
+  text-align: center;
+  margin: 0;
+}
+
+/* Paragraph styles */
+p {
+  display: inline-block;
+  text-align: center;
+  font-style: italic;
+  width: 33.3%;
+  color: #393939;
+  padding: 1.34rem;
+}
+
+/* Span styles */
+span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #5BACC3;
+  margin: 0.67rem;
+}
+.nav-right span {
+  margin: 0;
+}/*# sourceMappingURL=menu.css.map */

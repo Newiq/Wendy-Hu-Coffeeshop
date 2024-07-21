@@ -1,0 +1,104 @@
+@use './partials/global' as *;
+/* Background styles */
+.bg {
+    position: relative;
+    @include flex-center;
+    width: 100%;
+    height: 46.67rem;
+    background: url("../assets/images/coffee-circle.jpg") center/cover;
+    z-index: -2;
+
+    &__title {
+        position: relative;
+        @include flex-center;
+        margin: 0;
+        color: $nitro-white;
+        border: $nitro-blue solid 0.34rem;
+        width: 20rem;
+        height: 13.34rem;
+            &::before {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            right: -1rem;
+            bottom: -1rem;
+            background-color: $nitro-black;
+            z-index: -1;
+            }
+    }
+}
+
+h2 {
+    text-align: center;   
+    margin: 0;
+}
+h3 {
+    margin: 0;
+}
+
+#hotdrink, #pastries {
+    background-color: $nitro-pink;
+    text-align: center;
+}
+#colddrink {
+    background-color: #F7F7F7;
+    text-align: center;
+}
+
+/* Menu section */
+.subnav {
+    @include flex-center;
+    gap: $spacing-small;
+}
+.menu {
+    @include flex-center;
+    width: 100%;
+    background-color: $nitro-black;
+    color: $nitro-white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &__item {
+        margin: $spacing-small 0;
+        text-align: center;
+        border-left: $nitro-blue solid 0.27rem;
+        padding: 0 $spacing-small;
+    }
+
+    &__link {
+        display: flex;
+        @include none-style;
+    }
+    }
+
+
+.drinks {
+    &__title,
+    &__subtitle {
+        @include text-center;
+        margin: 0;
+    }
+    }
+
+
+/* Paragraph styles */
+p {
+    @include menu_pstyle;
+}
+
+/* Span styles */
+span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: $nitro-blue;
+    margin: 0.67rem;
+    .nav-right & {
+        margin: 0;
+    }
+}
+
+
+
+
